@@ -11,7 +11,7 @@
         required
         class="select"
       >
-        <option value="" disabled>-- Choisir une personne --</option>
+        <option value="" disabled>-- Séléctionne une personne </option>
         <option
           v-for="personne in personnes"
           :key="personne.matricule"
@@ -29,7 +29,7 @@
         required
         class="select"
       >
-        <option value="" disabled>-- Choisir un projet --</option>
+        <option value="" disabled>-- Séléctionne un projet --</option>
         <option
           v-for="projet in projets"
           :key="projet.id"
@@ -45,7 +45,7 @@
         id="role"
         type="text"
         v-model="role"
-        placeholder="Ex: développeur"
+        placeholder="developpeur"
         required
         class="input"
       />
@@ -146,106 +146,105 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* --- Mise en forme générale --- */
+
 .card {
   max-width: 400px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre douce pour la carte */
 }
 
 h2 {
   margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Taille de la police du titre */
 }
 
-/* --- Formulaire --- */
+/* Formulaire de participation */
 .participation-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem; /* Espacement entre les éléments du formulaire */
 }
 
 .label {
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem; /* Espacement sous les labels */
 }
 
 .select, .input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.9rem; /* Taille de la police pour les champs */
 }
 
+/* Conteneur du slider */
 .slider-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* Espacement entre le slider et la valeur */
 }
 
-/* Le slider (input range) */
+/* Style du slider */
 .slider {
   flex: 1;
   -webkit-appearance: none;
   height: 4px;
-  background: #ddd;
+  background: #ddd; /* Fond du slider */
   border-radius: 2px;
   outline: none;
-  cursor: pointer;
+  cursor: pointer; /* Curseur pour indiquer qu'on peut interagir */
 }
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #2196f3;
+  background: #2196f3; /* Couleur du bouton du slider */
   cursor: pointer;
   border: 2px solid #fff;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2); /* Ombre autour du bouton */
 }
 .slider::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #2196f3;
+  background: #2196f3; /* Couleur du bouton du slider */
   cursor: pointer;
   border: 2px solid #fff;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2); /* Ombre autour du bouton */
 }
 
-/* Valeur du slider */
 .slider-value {
   width: 40px;
-  text-align: center;
-}
+  text-align: center; /* Centrer la valeur affichée du slider */
+  color: #2196f3/* Couleur pour une meilleure visibilité */}
 
-/* --- Bouton --- */
 .btn-submit {
   padding: 0.6rem 1rem;
   background-color: #2196f3;
-  color: #fff;
+  color: #DCDCDC;
   font-weight: 600;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out; /* Transition pour le hover */
   font-size: 0.9rem;
 }
 .btn-submit:hover {
-  background-color: #1976d2;
+  background-color: #1E90FF; /* Couleur du bouton au survol */
 }
 
 /* --- Feedback --- */
 .error {
   margin-top: 1rem;
-  color: #d32f2f;
+  color: #d32f2f; /* Couleur rouge pour les erreurs */
 }
 .success {
   margin-top: 1rem;
-  color: #388e3c;
+  color: #388e3c; /* Couleur verte pour les succès */
 }
 </style>
+
